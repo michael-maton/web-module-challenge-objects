@@ -209,10 +209,28 @@ Use the carMaker function below to do the following:
 */
 
 
-function carMaker(/* code here */) {
-    /* code here */
-    
+
+
+function carMaker(Make, Model, Odometer) {
+  return {
+    Make, 
+    Model, 
+    Odometer,
+    drive: function(addedMiles) {
+      this.Odometer = this.Odometer + addedMiles;
+    }  
+  };
 }
+
+var car1 = carMaker("Volkswagen", "GTI", 34000);
+
+console.log(car1);
+
+car1.drive(500);
+console.log(car1.Odometer);
+
+car1.drive(50000);
+console.log(car1.Odometer);
 
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
